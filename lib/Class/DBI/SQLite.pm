@@ -2,7 +2,7 @@ package Class::DBI::SQLite;
 
 use strict;
 use vars qw($VERSION);
-$VERSION = 0.02;
+$VERSION = 0.03;
 
 require Class::DBI;
 use base qw(Class::DBI);
@@ -36,6 +36,7 @@ SQL
     $sth->finish;
 
     my $parser = SQL::Parser->new('AnyData', { RaiseError => 1});
+    $parser->feature("valid_data_types","TIMESTAMP",1);
     $parser->parse($sql);
     my $structure = $parser->structure;
     my $primary;

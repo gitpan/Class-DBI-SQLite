@@ -5,3 +5,4 @@ lib/Class/DBI/SQLite.pm
 t/00_compile.t
 t/01_sqlite.t
 t/lib/Film.pm
+META.yml                                 Module meta-data (added by MakeMaker)
