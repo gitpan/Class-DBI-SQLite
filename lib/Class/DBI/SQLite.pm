@@ -2,7 +2,7 @@ package Class::DBI::SQLite;
 
 use strict;
 use vars qw($VERSION);
-$VERSION = 0.04;
+$VERSION = 0.05;
 
 require Class::DBI;
 use base qw(Class::DBI);
@@ -17,13 +17,12 @@ sub set_up_table {
     my($class, $table) = @_;
 
     # find all columns.
-    my $sth = $class->db_Main->prepare(<<'SQL');
-PRAGMA table_info(?)
-SQL
-    $sth->execute($table);
+    warn $table;
+    my $sth = $class->db_Main->prepare("PRAGMA table_info('$table')");
+    $sth->execute();
     my @columns;
     while (my $row = $sth->fetchrow_hashref) {
-	push @columns,$row->{name};
+	push @columns, $row->{name};
     }
     $sth->finish;
 

@@ -1,5 +1,10 @@
 Revision history for Perl extension Class::DBI::SQLite
 
+0.05  Tue Oct 19 16:44:39 JST 2004
+	- Fixed error in PRAGMA table_info(?) with newer DBD::SQLite
+	  http://rt.cpan.org/NoAuth/Bug.html?id=7794
+	  Thanks to Seth Gordon and Marcus Ramberg
+
 0.04  Mon Mar 15 20:56:38 JST 2004
 	- Added t/02_table.t in MANIFEST
 	  (Thanks to Tony Bowden)
