@@ -1,5 +1,10 @@
 Revision history for Perl extension Class::DBI::SQLite
 
+0.04  Mon Mar 15 20:56:38 JST 2004
+	- Added t/02_table.t in MANIFEST
+	  (Thanks to Tony Bowden)
+	- Added SQL::Dialects::AnyData to PREREQ_PM
+	
 0.03  Thu Feb  5 03:38:20 JST 2004
 	* Fixed bug that SQL::Parser barfs with TIMESTAMP column
 	  (Thanks to Aaron Straup Cope)
